@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidrogel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #1a1f1e;
+        }
+        header {
+            background-color: #93ccc6;
+            color: #ffffff;
+            text-align: center;
+            padding: 0.5rem;
+        }
+        nav {
+            background-color: #7ab3ad;
+            padding: 0.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .hero-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+        }
+        main {
+            padding: 2rem;
+        }
+        .botones-cultivos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .boton-cultivo {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: #7ab3ad;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .boton-cultivo:hover {
+            background-color: #5a8d87;
+        }
+        h2 {
+            text-align: center;
+        }
+        .columnas {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 2rem;
+        }
+        .columna {
+            flex: 1;
+            width: calc(33.33% - 2rem);
+            min-height: 200px;
+            margin: 0;
+            padding: 1.5rem;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AquaGel</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="info.html">Información</a></li>
+            <li><a href="info2.html">Empezar</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="columnas">
+            <div class="columna">
+                <h2>Columna 1</h2>
+                <p>Contenido de la primera columna</p>
+            </div>
+            <div class="columna">
+                <h2>Columna 2</h2>
+                <p>Contenido de la segunda columna</p>
+            </div>
+            <div class="columna">
+                <h2>Columna 3</h2>
+                <p>Contenido de la tercera columna</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
