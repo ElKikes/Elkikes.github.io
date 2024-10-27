@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación de Riego</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 50px;
+            text-align: center;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        form {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+        input {
+            padding: 10px;
+            width: 80%;
+            max-width: 300px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 30px;
+            font-size: 24px;
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Simulación de Riego con Hidrogel</h1>
+    <h2>Ingresa el número de esferas por metro cuadrado</h2>
+    
+    <form id="simulacionForm">
+        <label for="N">Número de esferas por metro cuadrado (N):</label>
+        <input type="number" id="N" name="N" placeholder="Ej. 1" required>
+
+        <button type="button" onclick="calcularTiempoRiego()">Calcular Días sin Riego</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function calcularTiempoRiego() {
+            // Valor fijo para la capacidad de retención de agua por esfera (C = 0.05 litros)
+            const C = 0.05;
+
+            // Valor fijo para la demanda hídrica (D = 5 litros por metro cuadrado por día)
+            const D = 5;
+
+            // Obtener el valor ingresado por el usuario para N
+            const N = parseInt(document.getElementById("N").value);
+
+            // Validar que el valor ingresado para N sea correcto
+            if (isNaN(N) || N <= 0) {
+                document.getElementById("result").innerHTML = "Por favor, ingresa un valor válido para el número de esferas.";
+                return;
+            }
+
+            // Realizar el cálculo de la ecuación T = (C * N) / D
+            const T = (C * N) / D;
+
+            // Mostrar el resultado en días
+            document.getElementById("result").innerHTML = `El tiempo entre riegos es de <strong>${T.toFixed(2)}</strong> días.`;
+        }
+    </script>
+
+</body>
+</html>
+
