@@ -6,7 +6,7 @@
     <title>Hidrogel</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial, sans-serif; 
             line-height: 1.6;
             margin: 0;
             padding: 0;
@@ -49,13 +49,81 @@
             object-fit: cover;
         }
         main {
+            padding: 0;
+        }
+        main h2, main > p {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        .imagen-contenedor {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            margin: 0;
+            overflow: hidden;
+        }
+        .imagen-fondo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .contenido-imagen {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
             padding: 2rem;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 500px;
+        }
+        .boton {
+            background-color: #7ab3ad;
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #93ccc6;
+            color: white;
+            padding: 2rem 0;
+            width: 100%;
+            margin-top: 2rem;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            padding: 0 2rem;
+        }
+        .footer-section {
+            flex: 1;
+            margin: 0 1rem;
+        }
+        footer h2 {
+            margin-bottom: 1rem;
+            color: white;
+        }
+        .footer-section p, .footer-section a {
+            color: white;
+            text-decoration: none;
+            margin: 0.5rem 0;
+        }
+        .footer-section a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>AquaGel</h1>
+        <h1>Hidrogel</h1>
     </header>
     <nav>
         <ul>
@@ -71,6 +139,30 @@
             En Nuevo León, la constante presencia de sequías nos ha dado la tarea de gestionar este recurso vital. Sin embargo, son muchos los que cometen el error de desperdiciar lo poco de agua que logramos obtener; esto ocurre, por ejemplo, al regar las plantas o cultivos de manera inadecuada, sea aplicando una cantidad excesiva de agua, mayor a la cantidad que las plantas realmente necesitan o ubicando aspersores donde su eficiencia es mínima. Estas prácticas ocasionan que el agua disponible no se use de manera óptima ni eficiente, empeorando los problemas de escasez. 
             Sequías como la de 2011 acabaron con la producción temporal en México y disminuyeron drásticamente los datos ganaderos; en 2021-2023 hemos tenido una sequía que ha dejado sin agua a grandes ciudades, como Monterrey y la Ciudad de México, y ha vaciado los grandes embalses nacionales.    
         </p>
+        <div class="imagen-contenedor">
+            <img src="Images/img_caja1.jpg" alt="Caja 1" class="imagen-fondo">
+            <div class="contenido-imagen">
+                <h2>Experimentación</h2>
+                <p>El hidrogel es un polímero superabsorbente que puede retener grandes cantidades de agua.</p>
+                <a href="#" class="boton">Más información</a>
+            </div>
+        </div>
+        <p>La experimentacion se realizo con el objetivo de confirmar la eficiencia del hidrogel en la absorcion de agua, y la optimizacion de su uso en el riego de cultivos.</p>
     </main>
+    <footer>
+        <h2 style="text-align: center;">Elaborado por:</h2>
+        <div class="footer-content">
+            <div class="footer-section">
+                <p>Santiago Villareal Fernández</p>
+                <p>Enrique Daniel Jáuregui Torres</p>
+                <p>Fátima Lizbeth Muñoz Téllez</p>
+            </div>
+            <div class="footer-section">
+                <p>Rodrigo Asael Rubí López</p>
+                <p>Ariana Lizeth Sánchez Martínez</p>
+                <p>Ariadna Fabiola Bonilla Villarreal</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
