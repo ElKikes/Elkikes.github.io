@@ -238,6 +238,215 @@
         .contenido-imagen .texto-italica {
             font-style: italic;
         }
+
+        /* Media queries para dispositivos móviles */
+        @media screen and (max-width: 768px) {
+            /* Ajustes de navegación */
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            
+            /* Ajustes de contenido flex */
+            .contenido-flex {
+                flex-direction: column;
+            }
+            
+            /* Ajustes de columnas */
+            .columnas {
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+            }
+            
+            .columna {
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .columna img {
+                width: 200px;
+                height: auto;
+                margin: 1rem auto;
+                display: block;
+            }
+            
+            .columna p {
+                text-align: center;
+                margin: 0.5rem 0;
+            }
+            
+            /* Ajustes de galería de imágenes */
+            .galeria-imagenes {
+                flex-direction: column;
+            }
+            
+            .imagen-resultado {
+                max-width: 100%;
+            }
+            
+            /* Ajustes de footer */
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            /* Ajustes de contenido de imagen */
+            .contenido-imagen {
+                width: 90%;
+                padding: 1rem;
+            }
+            
+            /* Ajustes de experimento sección */
+            .experimento-seccion {
+                flex-direction: column;
+            }
+            
+            /* Ajustes de video */
+            .video-columna iframe {
+                height: 250px;
+            }
+            
+            /* Ajustes de texto */
+            main h2, main > p {
+                padding: 0 1rem;
+            }
+            
+            /* Ajustes de imágenes */
+            img {
+                max-width: 100%;
+            }
+            
+            /* Ajustes de calculadora */
+            .calculadora {
+                margin: 1rem;
+                padding: 1rem;
+            }
+
+            /* Regla general para cualquier contenedor que tenga texto e imagen */
+            div[style*="display: flex"] {
+                flex-direction: column !important;
+            }
+
+            /* Forzar que todo el texto vaya primero */
+            p, h1, h2, h3, h4, h5, h6, ul, ol {
+                order: 1;
+            }
+
+            /* Forzar que todas las imágenes vayan después */
+            img, .imagen-contenedor, div[style*="text-align: center"] {
+                order: 2;
+                width: 100% !important;
+                margin-top: 1rem !important;
+            }
+
+            /* Ajustes específicos para listas con imágenes */
+            li {
+                display: flex !important;
+                flex-direction: column !important;
+            }
+
+            li > p {
+                order: 1;
+            }
+
+            li > div, li > img {
+                order: 2;
+                margin-top: 1rem !important;
+            }
+
+            /* Ajustes para la calculadora */
+            .calculadora img {
+                width: 100% !important;
+                margin-top: 1rem !important;
+            }
+
+            /* Ajustes para galerías de imágenes */
+            .galeria-imagenes {
+                flex-direction: column !important;
+            }
+
+            .imagen-resultado {
+                width: 100% !important;
+                margin-top: 1rem !important;
+            }
+
+            /* Asegurar que las imágenes sean responsivas */
+            img {
+                max-width: 100% !important;
+                height: auto !important;
+            }
+
+            /* Ajustes específicos para la sección de hongos */
+            .imagen-contenedor {
+                position: relative;
+                height: 300px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .contenido-imagen {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 85%;
+                background-color: rgba(0, 0, 0, 0.8);
+                padding: 1.2rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border-radius: 8px;
+            }
+
+            .contenido-imagen h2 {
+                margin: 0 0 0.6rem 0;
+                text-align: center;
+                width: 100%;
+                font-size: 1.2rem;
+            }
+
+            .contenido-imagen p {
+                margin: 0.4rem 0;
+                text-align: center;
+                width: 100%;
+                font-size: 0.9rem;
+                line-height: 1.3;
+            }
+
+            .contenido-imagen hr {
+                width: 70%;
+                margin: 0.6rem auto;
+            }
+
+            .contenido-imagen .boton {
+                margin: 0.6rem auto 0;
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+        }
+
+        /* Media queries para tablets */
+        @media screen and (min-width: 769px) and (max-width: 1024px) {
+            .contenido-flex {
+                padding: 0 1rem;
+            }
+            
+            .galeria-imagenes {
+                padding: 0 1rem;
+            }
+            
+            main h2, main > p {
+                padding: 0 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -275,7 +484,7 @@
         <h2>Sustancias inmersas</h2>
         <p>Las sustancias inmersas en el hidrogel son los siguientes:</p>
         <h3>Pectina</h3>
-        <p>La pectina La pectina es un polisacárido soluble que se utiliza para que el hidrogel sea biodegradable. es un polisacárido natural extraído de la piel de manzana y se utiliza como agente gelificante en la industria alimentaria. Es un polímero de ácido poligalacturónico que forma geles al hidratarse y se utiliza para mejorar la textura y consistencia de productos alimenticios.</p>
+        <p>La pectina es un polisacárido soluble que se utiliza para que el hidrogel sea biodegradable. Es extraído generalmente de la cascara de citricos y manzanas. Se utiliza como agente gelificante en la industria alimentaria, gracias a que es un polímero de ácido poligalacturónico que forma geles al hidratarse y se utiliza para mejorar la textura y consistencia de productos alimenticios.</p>
     
         <h3>Cloruro de calcio</h3>
         <p>El cloruro de calcio es un compuesto químico inorgánico con la fórmula CaCl2. Es un sólido blanco o incoloro que se disuelve en agua. El cloruro de calcio es soluble en agua y en etanol, y es un agente desecante y desinfectante. Se utiliza en la industria alimentaria como agente gelificante y en la producción de vidrio.</p>
