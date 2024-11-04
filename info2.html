@@ -386,16 +386,16 @@
             .imagen-contenedor {
                 position: relative;
                 height: 300px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                width: 100%;
             }
 
             .contenido-imagen {
                 position: absolute;
+                left: 0;
+                right: 0;
                 top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
+                transform: translateY(-50%);
+                margin: 0 auto;
                 width: 85%;
                 background-color: rgba(0, 0, 0, 0.8);
                 padding: 1.2rem;
@@ -404,21 +404,22 @@
                 align-items: center;
                 justify-content: center;
                 border-radius: 8px;
+                text-align: center;
             }
 
             .contenido-imagen h2 {
-                margin: 0 0 0.6rem 0;
-                text-align: center;
                 width: 100%;
+                margin: 0 0 0.6rem 0;
                 font-size: 1.2rem;
+                text-align: center;
             }
 
             .contenido-imagen p {
-                margin: 0.4rem 0;
-                text-align: center;
                 width: 100%;
+                margin: 0.4rem 0;
                 font-size: 0.9rem;
                 line-height: 1.3;
+                text-align: center;
             }
 
             .contenido-imagen hr {
@@ -519,6 +520,59 @@
             .bibliografia-container i {
                 word-wrap: break-word;
                 overflow-wrap: break-word;
+            }
+
+            /* Centrado general de texto */
+            body {
+                text-align: center;
+            }
+
+            /* Centrado de elementos de texto */
+            p, h1, h2, h3, h4, h5, h6 {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
+                padding: 0 1rem;
+                box-sizing: border-box;
+            }
+
+            /* Centrado de listas */
+            ul, ol {
+                text-align: center;
+                padding-left: 0;
+                padding-right: 0;
+                list-style-position: inside;
+            }
+
+            li {
+                text-align: center;
+                padding: 0.5rem 1rem;
+            }
+
+            /* Centrado en contenedores flex */
+            .contenido-flex,
+            .columnas,
+            .experimento-seccion,
+            div[style*="display: flex"] {
+                align-items: center;
+                text-align: center;
+            }
+
+            /* Centrado en la calculadora */
+            .calculadora {
+                text-align: center;
+            }
+
+            /* Centrado en el footer */
+            .footer-content,
+            .footer-section {
+                text-align: center;
+            }
+
+            /* Excepción para la bibliografía que debe mantener su alineación */
+            .bibliografia-container li {
+                text-align: left;
             }
         }
 
