@@ -94,75 +94,311 @@
             display: flex;
             justify-content: center;
             gap: 2rem;
-            margin: 2rem 0;
+            max-width: 1200px;
+            margin: 2rem auto;
             padding: 0 2rem;
         }
-        .imagen-galeria {
+        .imagen-resultado {
             flex: 1;
-            max-width: 300px;
+            max-width: calc(50% - 1rem);
         }
-        .imagen-galeria img {
+        .imagen-resultado img {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
+            height: auto;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .pie-imagen {
+            text-align: center;
+            margin-top: 0.5rem;
+            font-style: italic;
+            color: #666;
+        }
+        .imagen-galeria {
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .imagen-galeria img {
+            max-width: 100%;
+            max-height: 200px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+        footer {
+            background-color: #93ccc6;
+            color: white;
+            padding: 2rem 0;
+            width: 100%;
+            margin-top: 2rem;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            padding: 0 2rem;
+        }
+        .footer-section {
+            flex: 1;
+            margin: 0 1rem;
+            text-align: center;
+        }
+        footer h2 {
+            margin-bottom: 1rem;
+            color: white;
+        }
+        .footer-section p {
+            margin: 0.5rem 0;
+        }
+        .boton {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #7ab3ad;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+        .boton:hover {
+            background-color: #5a8d87;
+            transform: scale(1.05);
+        }
+        .imagen-contenedor {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            margin: 0;
+            overflow: hidden;
+        }
+        .imagen-fondo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .contenido-imagen {
+            position: absolute;
+            top: 50%;
+            right: 5%;
+            transform: translateY(-50%);
+            text-align: left;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 2rem;
+            border-radius: 10px;
+            width: 40%;
+            max-width: 500px;
+        }
+        .contenido-imagen h2 {
+            margin-bottom: 10px;
+        }
+        .contenido-imagen p {
+            margin-bottom: 20px;
+        }
+        .contenido-imagen a {
+            color: #fff;
+            text-decoration: none;
+            border: 2px solid #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .contenido-imagen a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .experimento-seccion {
+            display: flex;
+            gap: 2rem;
+            margin: 2rem auto;
+            max-width: 1200px;
+            padding: 0 2rem;
+        }
+        .experimento-texto {
+            flex: 2;  /* 2/3 del espacio */
+        }
+        .experimento-imagenes {
+            flex: 1;  /* 1/3 del espacio */
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .experimento-imagenes img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .contenido-imagen hr {
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            margin: .5rem 0;
+        }
+        .contenido-imagen .texto-italica {
+            font-style: italic;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>AquaGel</h1>
+        <h1>Hidrogel</h1>
     </header>
     <nav>
         <ul>
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="info.html">Información</a></li>
-            <li><a href="info2.html">Empezar</a></li>
+            <li><a href="info.html">Empezar</a></li>
+            <li><a href="info2.html">Información</a></li>
         </ul>
     </nav>
     <main>
         <h2>¿Por que se realizo el proyecto?</h2>
-        <p>El proyecto se hizo con el objetivo de crear un hidrogel que pueda absorber grandes cantidades de agua, y que pueda ser utilizado en el riego de cultivos, para asi poder optimizar el uso del agua y reducir la escasez de este recurso en el mundo.</p>
+        <p>Sequías como la de 2011 acabaron con la producción temporal en México y disminuyeron drásticamente los datos ganaderos; en 2021-2023 hemos tenido una sequía que ha dejado sin agua a grandes ciudades, como Monterrey y la Ciudad de México, y ha vaciado los grandes embalses nacionales. 
+            Por consiguiente, los distintos sectores que necesitan del agua para subsistir enfrentan diversas afectaciones. 
+            "Como consecuencia de la sequía que ha registrado Nuevo León en los últimos años, el 97.24% de las unidades de producción agrícola de la entidad registraron pérdidas en el 2022 debido a esta situación, siendo el mayor porcentaje entre los estados del país." -El financiero.</p>
+            <p>Por lo tanto, se propone el uso de un nuevo hidrogel capaz de absorber y mantener la humedad en el suelo, sin hacer daño al cultivo.</p>
         <h2>Objetivos de desarrollo sostenible</h2>
         <p>Los objetivos de desarrollo sostenible implicados en el proyecto son los siguientes:</p>
         <ul>
               
         <div class="galeria-imagenes">
             <div class="imagen-galeria">
-                <img src="Images/imagen1.jpg" alt="Imagen 1">
+                <img src="Images/ODS-15.png" alt="ODS 15">
             </div>
             <div class="imagen-galeria">
-                <img src="Images/imagen2.jpg" alt="Imagen 2">
+                <img src="Images/ODS-6.png" alt="ODS 6">
             </div>
         </div>
-            <li>Objetivo 1: Erradicar la pobreza</li>
-            <li>Objetivo 2: Erradicar la pobreza</li>
-            <li>Objetivo 3: Erradicar la pobreza</li>
+            <li>ODS 6 Agua limpia y saneamiento: Tiene una relación directa con el agua, debido a que el hidrogel absorbe dicho elemento en el momento del riego, y lo va expulsando lentamente para que las plantas se mantengan húmedas.</li>
+            <li>ODS 15 Vida de ecosistemas terrestres: El hidrogel ayuda estrechamente en la cimentación del suelo y son amigables con la microbiota de este, además de que  promueve un entorno saludable para el crecimiento de las plantas.</li>
         </ul>
         <h2>Sustancias inmersas</h2>
         <p>Las sustancias inmersas en el hidrogel son los siguientes:</p>
-        <ul>
-            <li>Pectina</li>
-            <li>CLoruro de calcio</li>
-        </ul>
         <h3>Pectina</h3>
-        <p>La pectina es un polisacárido natural extraído de la piel de manzana y se utiliza como agente gelificante en la industria alimentaria. Es un polímero de ácido poligalacturónico que forma geles al hidratarse y se utiliza para mejorar la textura y consistencia de productos alimenticios.</p>
-        <h2>CLoruro de calcio</h2>
+        <p>La pectina La pectina es un polisacárido soluble que se utiliza para que el hidrogel sea biodegradable. es un polisacárido natural extraído de la piel de manzana y se utiliza como agente gelificante en la industria alimentaria. Es un polímero de ácido poligalacturónico que forma geles al hidratarse y se utiliza para mejorar la textura y consistencia de productos alimenticios.</p>
+    
+        <h3>Cloruro de calcio</h3>
         <p>El cloruro de calcio es un compuesto químico inorgánico con la fórmula CaCl2. Es un sólido blanco o incoloro que se disuelve en agua. El cloruro de calcio es soluble en agua y en etanol, y es un agente desecante y desinfectante. Se utiliza en la industria alimentaria como agente gelificante y en la producción de vidrio.</p>
+        <h3>Agua</h3>
+        <p>El agua es la sustancia mas importante en esta reaccion, es mediante esta que se activan la pectina y el cloruro de calcio, generando así el hidrogel.</p>
         <h2>Explicación de su funcionamiento</h2>
-        <p>Explicacion blah blah blah</p>
-        <h2>Experimentación</h2>
-        <p>La experimentacion se realizo con el objetivo de confirmar las capacidades de nuestro hidrogel previamente mencionadas</p>
-        <div class="galeria-imagenes">
-            <img src="Images/imagen3.jpg" alt="Imagen 3">
-            <img src="Images/imagen4.jpg" alt="Imagen 4">
+        <p>Para qué se dé la reacción de la pectina cítrica con el cloruro de calcio, se necesita de la interacción entre estas.
+            Para la creación del hidrogel ocurren en las siguientes fases:</p>
+        <ol>
+            <li style="margin-bottom: 2rem;">
+                <p>Hidratación: La pectina se disuelve en agua, formando una solución viscosa. Las moléculas de agua interactúan con los grupos hidroxilo en la pectina, permitiendo que se forme una red tridimensional.</p>
+                <div style="text-align: center; margin-top: 1rem;">
+                    <img src="Images/Imagen1.png" alt="Proceso de hidratación" style="width: 300px; height: auto; border-radius: 8px;">
+                </div>
+            </li>
+            <li style="margin-bottom: 2rem;">
+                <p>Interacción con cloruro de calcio: El cloruro de calcio proporciona iones de calcio (Ca²⁺) que se unen a los grupos carboxilo de la pectina. Esta interacción es fundamental para la formación del gel.</p>
+                <div style="text-align: center; margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem; align-items: center;">
+                    <img src="Images/Imagen2.png" alt="Interacción química" style="width: 300px; height: auto; border-radius: 8px;">
+                    <img src="Images/Imagen3.png" alt="Interacción química" style="width: 400px; height: auto; border-radius: 8px;">
+                </div>
+            </li>
+            <li style="margin-bottom: 2rem;">
+                <p>Gelificación: La presencia de iones de calcio provoca que las cadenas de pectina se entrelacen, formando un gel. Este proceso se debe a la capacidad del calcio para unir diferentes moléculas de pectina, creando una estructura tridimensional que atrapa agua.</p>
+                <div style="text-align: center; margin-top: 1rem;">
+                    <img src="Images/Imagen4.png" alt="Proceso de gelificación" style="width: 400px; height: auto; border-radius: 8px;">
+                </div>
+            </li>
+        </ol>
+        <p>Gracias a esto la ecuación general de esta reacción es la siguiente:</p>
+        <div style="text-align: center; margin-top: 1rem;">
+            <img src="Images/Imagen5.png" alt="Proceso de gelificación" style="width: 400px; height: auto; border-radius: 8px;">
         </div>
-        <h3>Aparicion de hongos</h3>
-        <p>Durante los primeros 3 dias de experimentación no hubo cambio significativos</p>
+        <div class="experimento-seccion">
+            <!-- Texto en el lado izquierdo (2/3 del ancho) -->
+            <div class="experimento-texto">
+                <h2 id="Experimentacion">Experimentación</h2>
+                <p>La experimentacion se realizo con el objetivo de confirmar las capacidades de nuestro hidrogel previamente mencionadas. Para esto se compararon las condiciones (PH, humedad y temperatura) entre 2 macetas las cuales su unica diferencia es que en una de estas se habia colocado nuestro hidrogel.</p>
+            </div>
+            
+            <!-- Imágenes en el lado derecho (1/3 del ancho) -->
+            <div class="experimento-imagenes">
+                <img src="Images/img_caja1.jpg" alt="Imagen 3" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            </div>
+        </div>
+        
+        <div class="imagen-contenedor">
+            <img src="Images/Hongos-1.jpg" alt="Hongos 1" class="imagen-fondo">
+            <div class="contenido-imagen">
+                <h2>Aparición de hongos</h2>
+                <p>Durante los primeros 3 días de experimentación no hubo cambios significativos entre las macetas, sin embargo se observó la aparición de hongos en la maceta con el hidrogel.</p>
+                <hr style="border: 1px solid rgba(255, 255, 255, 0.3); margin: 1rem 0;">
+                <p style="font-style: italic;">Fotografías del hongo bajo el microscopio</p>
+            </div>
+        </div>
+        <p>Se examinaron los hongos bajo el microscopio, y se determino que se trataba de un hongo del genero aspergilus. Las esporas de este hongo forman parte de la contaminación en nuestro estado y no representan un riesgo para la salud. Sin embargo para evitar la aparición de otro tipo de hongos que puedan representar un riesgo para la salud recomendamos el uso de fungicidas, siempre y cuando estos no afecten la salud del ambiente, del cultivo o de nosotros.</p>
+        <p>La aparición de organismos del genero fungus nos confirma una de las habilidades de nuestros hidrogel, el cual es el poder entregar el agua absorbida y por ende utilizar este hidrogel para cultivos.</p>
+        </div>
         <h3>Resultados</h3>
-        <p>Explicacion blah blah blah</p>
+        <p>Los últimos tres días de mediciones se pudo observar una gran diferencia entre estas, beneficiando los resultados de la caja 2, en la cual el valor mínimo de humedad fue de 12% a comparación de la caja 1 la cual fue de 63% logrando así confirmar que nuestro hidrogel si beneficia en gran medida la absorción de humedad en la tierra. </p>
+        <div class="galeria-imagenes">
+            <div class="imagen-resultado">
+                <img src="Images/img_maceta1.jpg" alt="Resultados 1">
+                <p class="pie-imagen">Valores maximos y minimos de la maceta con hidrogel.</p>
+            </div>
+            <div class="imagen-resultado">
+                <img src="Images/img_maceta2.jpg" alt="Resultados 2">
+                <p class="pie-imagen">Valores maximos y minimos de la maceta sin hidrogel.</p>
+            </div>
+        </div>
+        <p>Esto nos confirma que el hidrogel es capaz de mantener la humedad en el ambiente por almenos 7 dias.</p>
+        <h2>Necesidad hidrica</h2>
+        <p>Para calcular la necesidad hidrica por tipo de cultivo (Frutas, Verduras, Leguminosas) se hizo un promedio de mm de agua que requiere cada tipo al año. Un mm de agua representa 1 litro de agua por metro cuadrado. por ende, se dividio el promedio de mm del cultivo entre 365 (dias del año) y asi se obtuvo la necesidad hidrica (litros) al dia del cultivo. Con esto ya hecho podemos calcular la cantidad de hidrogel necesario.</p>
+        <div style="display: flex; align-items: center; gap: 2rem; margin: 2rem auto; max-width: 1200px; padding: 0 2rem;">
+            <div style="flex: 2;">
+                <p>Cada gramo de hidrogel es capaz de absorber 6.85 litros de agua, por ende, para calcular la cantidad de hidrogel necesario se divide la necesidad hidrica (litros) entre la capacidad de absorción del hidrogel. Lo cual se puede describir en al siguiente ecuación:</p>
+                <ul style="list-style: none; margin-top: 1rem; padding: 0;">
+                    <li style="margin-bottom: 0.5rem;">• "g" Cantidad de hidrogel necesario (gramos).</li>
+                    <li style="margin-bottom: 0.5rem;">• "l" Necesidad hidrica del cultivo al dia (litros).</li>
+                    <li style="margin-bottom: 0.5rem;">• "a" Capacidad de absorción del hidrogel (6.85 litros/gramo).</li>
+                </ul>
+            </div>
+            <div style="flex: 1; text-align: center;">
+                <img src="Images/Ecuacion-6.png" alt="Ecuacion 6" style="width: 200px; height: auto;">
+            </div>
+        </div>
+        <p>Con esta formula se creo una calculadora que simplifica el calculo de la cantidad de hidrogel necesario para un cultivo.</p>
+        <h2>Bibliografía</h2>
+        <div style="padding: 2rem; background-color: #f5f5f5; border-radius: 8px;">
+            <ul style="list-style-type: none; padding: 0;">
+                <li style="margin-bottom: 1rem; text-align: justify;">Baker, C. J., & Dickson, J. G. (1999). Pectins: A Review of Their Chemistry and Functionality in Food Systems. <i>Food Chemistry</i>, 66(1), 65-75. doi:10.1016/S0308-8146(99)00008-2.</li>
 
+                <li style="margin-bottom: 1rem; text-align: justify;">Bárcenas, A. (2024, 19 marzo). Lideran unidades agrícolas de NL pérdidas por sequía. <i>El Financiero</i>. https://www.elfinanciero.com.mx/monterrey/2024/03/19/lideran-unidades-agricolas-de-nl-perdidas-por-sequia/</li>
+
+                <li style="margin-bottom: 1rem; text-align: justify;">Gaceta UNAM. (2020, 28 enero). Más de 80% del agua se va en uso agrícola y de la industria. https://www.gaceta.unam.mx/crisis-agua-industria/</li>
+
+                <li style="margin-bottom: 1rem; text-align: justify;">Landeros, C. E., Contreras, F. A., Cuéllar, J. C., García, O. S., Gutiérrez, J. H., & Nava, A. S. (2024). <i>Funciones Y Relaciones</i>. Ediciones de Laurel.</li>
+
+                <li style="margin-bottom: 1rem; text-align: justify;">Medina, E., Vera, M., & Zarate, R. (2024). <i>Fenómenos Químicos en el Entorno</i> (1era edición). Ediciones de Laurel.</li>
+
+                <li style="margin-bottom: 1rem; text-align: justify;">Medina, N., Roque, M., Salas, & Treviño, R. (2022). <i>Comprensión y Expresión Lingüística Avanzada</i> (1era edición). Editorial Patria.</li>
+
+                <li style="margin-bottom: 1rem; text-align: justify;">Nexos. (2023, 19 de junio). ¿Cómo afecta la sequía al sector agrícola mexicano? https://medioambiente.nexos.com.mx/como-afecta-la-sequia-al-sector-agricola-mexicano/</li>
+
+                <li style="margin-bottom: 1rem; text-align: justify;">Revista Mexicana de Ciencias Agrícolas. (s.f.). Valor del agua en la producción agrícola bajo riego en México. https://cienciasagricolas.inifap.gob.mx/index.php/agricolas/article/view/2715/6231</li>
+            </ul>
+        </div>
     </main>
+
+    <footer>
+        <h2 style="text-align: center;">Elaborado por:</h2>
+        <div class="footer-content">
+            <div class="footer-section">
+                <p>Santiago Villareal Fernández</p>
+                <p>Enrique Daniel Jáuregui Torres</p>
+                <p>Fátima Lizbeth Muñoz Téllez</p>
+            </div>
+            <div class="footer-section">
+                <p>Rodrigo Asael Rubí López</p>
+                <p>Ariana Lizeth Sánchez Martínez</p>
+                <p>Ariadna Fabiola Bonilla Villarreal</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
