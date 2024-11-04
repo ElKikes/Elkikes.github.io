@@ -125,6 +125,154 @@
             background-color: white;
             border-radius: 4px;
         }
+
+        /* Media queries para dispositivos móviles */
+        @media screen and (max-width: 768px) {
+            /* Ajustes de navegación */
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            
+            /* Ajustes de contenido flex */
+            .contenido-flex {
+                flex-direction: column;
+            }
+            
+            /* Ajustes de columnas */
+            .columnas {
+                flex-direction: column;
+            }
+            
+            .columna {
+                width: 100%;
+            }
+            
+            /* Ajustes de galería de imágenes */
+            .galeria-imagenes {
+                flex-direction: column;
+            }
+            
+            .imagen-resultado {
+                max-width: 100%;
+            }
+            
+            /* Ajustes de footer */
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            /* Ajustes de contenido de imagen */
+            .contenido-imagen {
+                width: 90%;
+                padding: 1rem;
+            }
+            
+            /* Ajustes de experimento sección */
+            .experimento-seccion {
+                flex-direction: column;
+            }
+            
+            .experimento-texto {
+                order: 1;
+                width: 100%;
+                padding: 0 1rem;
+            }
+            
+            .experimento-imagenes {
+                order: 2;
+                width: 100%;
+                margin-top: 1rem;
+            }
+
+            /* Ajustes para la sección de ecuación */
+            .ecuacion-container {
+                flex-direction: column;
+            }
+
+            .ecuacion-texto {
+                order: 1;
+                flex: none;
+                width: 100%;
+            }
+
+            .ecuacion-imagen {
+                order: 2;
+                flex: none;
+                width: 100%;
+                margin-top: 1rem;
+            }
+
+            /* Ajustes para imágenes en lista */
+            ol li {
+                display: flex;
+                flex-direction: column;
+            }
+
+            ol li p {
+                order: 1;
+            }
+
+            ol li div {
+                order: 2;
+                margin-top: 1rem;
+            }
+
+            /* Ajustes para galería de imágenes */
+            .galeria-imagenes {
+                flex-direction: column;
+            }
+
+            .imagen-resultado {
+                max-width: 100%;
+                margin-top: 1rem;
+            }
+
+            /* Ajustes para imágenes generales */
+            .imagen-contenedor {
+                margin-top: 1rem;
+            }
+
+            /* Ajustes de video */
+            .video-columna iframe {
+                height: 250px;
+            }
+            
+            /* Ajustes de texto */
+            main h2, main > p {
+                padding: 0 1rem;
+            }
+            
+            /* Ajustes de imágenes */
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+            
+            /* Ajustes de calculadora */
+            .calculadora {
+                margin: 1rem;
+                padding: 1rem;
+            }
+        }
+
+        /* Media queries para tablets */
+        @media screen and (min-width: 769px) and (max-width: 1024px) {
+            .contenido-flex {
+                padding: 0 1rem;
+            }
+            
+            .galeria-imagenes {
+                padding: 0 1rem;
+            }
+            
+            main h2, main > p {
+                padding: 0 1rem;
+            }
+        }
     </style>
 </head>
 <body>
