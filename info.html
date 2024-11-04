@@ -140,19 +140,58 @@
                 margin: 0;
             }
 
-            /* Header y navegación */
+            /* Estilos específicos para header y nav */
             header {
+                background-color: #93ccc6;
                 padding: 1rem;
+                text-align: center;
+                width: 100%;
+            }
+
+            header h1 {
+                color: white;
+                margin: 0;
+                font-size: 1.8rem;
+            }
+
+            nav {
+                background-color: #7ab3ad;
+                width: 100%;
+                padding: 0.8rem 0;
+                position: sticky;
+                top: 0;
+                z-index: 1000;
             }
 
             nav ul {
+                display: flex;
                 flex-direction: column;
-                gap: 0.8rem;
-                padding: 1rem;
+                align-items: center;
+                gap: 1rem;
+                margin: 0;
+                padding: 0;
+                list-style: none;
             }
 
             nav ul li {
+                width: 100%;
                 margin: 0;
+                padding: 0.5rem 0;
+            }
+
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+                font-size: 1.1rem;
+                display: block;
+                width: 100%;
+                padding: 0.5rem 0;
+                transition: background-color 0.3s ease;
+            }
+
+            nav ul li a:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+                text-decoration: none;
             }
 
             /* Contenido principal */
