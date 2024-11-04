@@ -153,72 +153,106 @@
 
         /* Media queries para dispositivos móviles */
         @media screen and (max-width: 768px) {
-            /* Forzar centrado en todos los elementos */
+            /* Control de desbordamiento general */
             * {
-                text-align: center !important;
+                max-width: 100vw !important;
+                box-sizing: border-box !important;
+                word-wrap: break-word !important;
+                overflow-wrap: break-word !important;
             }
 
-            /* Centrado con flexbox */
-            body, main, section, div, header, footer, nav,
-            .contenido-flex, .columnas, .experimento-seccion,
-            .galeria-imagenes, .footer-content, .imagen-contenedor,
-            .contenido-imagen, .calculadora {
-                display: flex !important;
-                flex-direction: column !important;
-                align-items: center !important;
-                justify-content: center !important;
+            body {
+                overflow-x: hidden !important;
                 width: 100% !important;
-                margin-left: auto !important;
-                margin-right: auto !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            /* Contenedores principales */
+            main, header, nav, footer, section, div {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
                 box-sizing: border-box !important;
             }
 
-            /* Centrado de texto */
-            p, h1, h2, h3, h4, h5, h6, span, a {
-                text-align: center !important;
-                width: 100% !important;
-                margin-left: auto !important;
-                margin-right: auto !important;
-                padding: 0 1rem !important;
-            }
-
-            /* Centrado de listas */
-            ul, ol {
-                padding: 0 !important;
-                margin: 1rem auto !important;
-                list-style-position: inside !important;
-                width: 100% !important;
-            }
-
-            li {
-                text-align: center !important;
-                width: 100% !important;
-                margin: 0.5rem auto !important;
-                padding: 0 1rem !important;
-            }
-
-            /* Centrado de imágenes */
+            /* Imágenes responsivas */
             img {
+                max-width: 100% !important;
+                height: auto !important;
+                object-fit: contain !important;
+            }
+
+            /* Texto y párrafos */
+            p, h1, h2, h3, h4, h5, h6, span, a {
+                max-width: 100% !important;
+                padding: 0.5rem !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+
+            /* Listas */
+            ul, ol {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding-left: 2rem !important;
+                padding-right: 1rem !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+
+            /* Tablas */
+            table {
+                width: 100% !important;
+                max-width: 100% !important;
                 display: block !important;
+                overflow-x: auto !important;
+            }
+
+            /* Calculadora */
+            .calculadora {
+                width: 90% !important;
+                max-width: 90% !important;
                 margin: 1rem auto !important;
+            }
+
+            /* Contenido de imagen */
+            .contenido-imagen {
+                width: 90% !important;
+                max-width: 90% !important;
+                left: 50% !important;
+                transform: translateX(-50%) translateY(-50%) !important;
+            }
+
+            /* Bibliografía */
+            .bibliografia-container {
+                width: 90% !important;
+                max-width: 90% !important;
+                margin: 1rem auto !important;
+                padding: 1rem !important;
+            }
+
+            /* Galería de imágenes */
+            .galeria-imagenes {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding: 0 1rem !important;
+            }
+
+            .imagen-resultado {
+                width: 100% !important;
                 max-width: 100% !important;
             }
 
-            /* Excepción para la bibliografía */
-            .bibliografia-container li {
-                text-align: left !important;
-            }
-
-            /* Ajuste para navegación */
-            nav ul {
-                display: flex !important;
-                flex-direction: column !important;
-                align-items: center !important;
-            }
-
-            /* Ajuste para botones */
-            button, .boton {
-                margin: 1rem auto !important;
+            /* Footer */
+            .footer-content {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding: 1rem !important;
             }
         }
 
