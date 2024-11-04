@@ -82,12 +82,18 @@
             max-width: 500px;
         }
         .boton {
+            display: inline-block;
+            padding: 12px 24px;
             background-color: #7ab3ad;
-            color: #ffffff;
-            padding: 0.5rem 1rem;
-            border: none;
-            border-radius: 0.25rem;
-            cursor: pointer;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+        .boton:hover {
+            background-color: #5a8d87;
+            transform: scale(1.05);
         }
         footer {
             background-color: #93ccc6;
@@ -119,6 +125,31 @@
         .footer-section a:hover {
             text-decoration: underline;
         }
+        .contenido-flex {
+            display: flex;
+            gap: 2rem;
+            margin: 2rem auto;
+            max-width: 1200px;
+            padding: 0 2rem;
+        }
+        .texto-columna {
+            flex: 1;
+        }
+        .video-columna {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+        .video-columna iframe {
+            width: 100%;
+            height: 315px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        main h2 {
+            text-align: center;
+            margin: 2rem auto;
+        }
     </style>
 </head>
 <body>
@@ -128,26 +159,44 @@
     <nav>
         <ul>
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="info.html">Información</a></li>
-            <li><a href="info2.html">Empezar</a></li>
+            <li><a href="info.html">Empezar</a></li>
+            <li><a href="info2.html">Información</a></li>
         </ul>
     </nav>
     <main>
         <img src="Images/campos-de-cultivo.jpg" alt="Campos de cultivo" class="hero-image">
-        <h2>Bienvenido a nuestra página sobre hidrogel</h2>
-        <p>La realización de este proyecto tiene como objetivo principal el ayudar al medio ambiente reduciendo el consumo del agua en el ámbito de la agricultura. Para realizar nuestra meta, se implementará el uso de hidrogel para lograr optimizar la absorción de la humedad del ambiente.  
-            En Nuevo León, la constante presencia de sequías nos ha dado la tarea de gestionar este recurso vital. Sin embargo, son muchos los que cometen el error de desperdiciar lo poco de agua que logramos obtener; esto ocurre, por ejemplo, al regar las plantas o cultivos de manera inadecuada, sea aplicando una cantidad excesiva de agua, mayor a la cantidad que las plantas realmente necesitan o ubicando aspersores donde su eficiencia es mínima. Estas prácticas ocasionan que el agua disponible no se use de manera óptima ni eficiente, empeorando los problemas de escasez. 
-            Sequías como la de 2011 acabaron con la producción temporal en México y disminuyeron drásticamente los datos ganaderos; en 2021-2023 hemos tenido una sequía que ha dejado sin agua a grandes ciudades, como Monterrey y la Ciudad de México, y ha vaciado los grandes embalses nacionales.    
-        </p>
+        <h2 style="text-align: center;">Bienvenido</h2>
+        <div class="contenido-flex">
+            <!-- Columna de texto (lado izquierdo) -->
+            <div class="texto-columna">
+                <p>La realización de este proyecto tiene como objetivo principal el ayudar al medio ambiente reduciendo el consumo del agua en el ámbito de la agricultura. Para realizar nuestra meta, se implementará el uso de hidrogel para lograr optimizar la absorción de la humedad del ambiente.  
+                    En Nuevo León, la constante presencia de sequías nos ha dado la tarea de gestionar este recurso vital. Sin embargo, son muchos los que cometen el error de desperdiciar lo poco de agua que logramos obtener; esto ocurre, por ejemplo, al regar las plantas o cultivos de manera inadecuada, sea aplicando una cantidad excesiva de agua, mayor a la cantidad que las plantas realmente necesitan o ubicando aspersores donde su eficiencia es mínima. Estas prácticas ocasionan que el agua disponible no se use de manera óptima ni eficiente, empeorando los problemas de escasez. 
+                    Sequías como la de 2011 acabaron con la producción temporal en México y disminuyeron drásticamente los datos ganaderos; en 2021-2023 hemos tenido una sequía que ha dejado sin agua a grandes ciudades, como Monterrey y la Ciudad de México, y ha vaciado los grandes embalses nacionales.</p>
+            </div>
+            
+            <!-- Video de YouTube (lado derecho) -->
+            <div class="video-columna">
+                <iframe 
+                    width="100%" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/x1Qi2dd9bGg" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen
+                    style="border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                </iframe>
+            </div>
+        </div>
         <div class="imagen-contenedor">
             <img src="Images/img_caja1.jpg" alt="Caja 1" class="imagen-fondo">
             <div class="contenido-imagen">
                 <h2>Experimentación</h2>
-                <p>El hidrogel es un polímero superabsorbente que puede retener grandes cantidades de agua.</p>
-                <a href="#" class="boton">Más información</a>
+                <p>Da clic en el siguiente botón para obtener más información sobre la experimentación realizada.</p>
+                <a href="info2.html#Experimentacion" class="boton">Más información</a>
             </div>
         </div>
-        <p>La experimentacion se realizo con el objetivo de confirmar la eficiencia del hidrogel en la absorcion de agua, y la optimizacion de su uso en el riego de cultivos.</p>
+        
     </main>
     <footer>
         <h2 style="text-align: center;">Elaborado por:</h2>
