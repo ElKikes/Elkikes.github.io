@@ -150,6 +150,107 @@
             text-align: center;
             margin: 2rem auto;
         }
+
+        /* Media queries para dispositivos móviles */
+        @media screen and (max-width: 768px) {
+            /* Ajustes de navegación */
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            
+            /* Ajustes de contenido flex */
+            .contenido-flex {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .texto-columna {
+                order: 1;
+                width: 100%;
+                padding: 0 1rem;
+            }
+            
+            .video-columna {
+                order: 2;
+                width: 100%;
+                padding: 0 1rem;
+            }
+            
+            .video-columna iframe {
+                width: 100%;
+                height: 250px;
+                margin-top: 1rem;
+            }
+            
+            /* Ajustes de columnas */
+            .columnas {
+                flex-direction: column;
+            }
+            
+            .columna {
+                width: 100%;
+            }
+            
+            /* Ajustes de galería de imágenes */
+            .galeria-imagenes {
+                flex-direction: column;
+            }
+            
+            .imagen-resultado {
+                max-width: 100%;
+            }
+            
+            /* Ajustes de footer */
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            /* Ajustes de contenido de imagen */
+            .contenido-imagen {
+                width: 90%;
+                padding: 1rem;
+            }
+            
+            /* Ajustes de experimento sección */
+            .experimento-seccion {
+                flex-direction: column;
+            }
+            
+            /* Ajustes de texto */
+            main h2, main > p {
+                padding: 0 1rem;
+            }
+            
+            /* Ajustes de imágenes */
+            img {
+                max-width: 100%;
+            }
+            
+            /* Ajustes de calculadora */
+            .calculadora {
+                margin: 1rem;
+                padding: 1rem;
+            }
+        }
+
+        /* Media queries para tablets */
+        @media screen and (min-width: 769px) and (max-width: 1024px) {
+            .contenido-flex {
+                padding: 0 1rem;
+            }
+            
+            .galeria-imagenes {
+                padding: 0 1rem;
+            }
+            
+            main h2, main > p {
+                padding: 0 1rem;
+            }
+        }
     </style>
 </head>
 <body>
