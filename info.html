@@ -128,96 +128,116 @@
 
         /* Media queries para dispositivos móviles */
         @media screen and (max-width: 768px) {
-            /* Centrado general */
+            /* Estilos generales */
+            * {
+                text-align: center !important;
+                box-sizing: border-box !important;
+            }
+
             body {
-                text-align: center;
-            }
-
-            /* Centrado de todos los contenedores */
-            main, section, div {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-                padding: 0 1rem;
-                box-sizing: border-box;
-            }
-
-            /* Centrado de texto */
-            p, h1, h2, h3, h4, h5, h6 {
-                text-align: center;
-                width: 100%;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            /* Centrado de listas */
-            ul, ol {
-                width: 100%;
+                overflow-x: hidden;
                 padding: 0;
-                list-style-position: inside;
-                text-align: center;
+                margin: 0;
+            }
+
+            /* Header y navegación */
+            header {
+                padding: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.8rem;
+                padding: 1rem;
+            }
+
+            nav ul li {
+                margin: 0;
+            }
+
+            /* Contenido principal */
+            main {
+                padding: 1rem;
+            }
+
+            /* Contenedores flex */
+            div[style*="display: flex"],
+            .contenido-flex,
+            .columnas,
+            .experimento-seccion,
+            .footer-content {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: center !important;
+                width: 100% !important;
+                gap: 1.5rem !important;
+                padding: 1rem !important;
+            }
+
+            /* Elementos de texto */
+            h1, h2, h3, h4, h5, h6, p {
+                width: 100% !important;
+                padding: 0 1rem !important;
+                margin: 1rem auto !important;
+            }
+
+            /* Imágenes */
+            img {
+                max-width: 100% !important;
+                height: auto !important;
+                margin: 1rem auto !important;
+                display: block !important;
+            }
+
+            /* Columnas */
+            .columna {
+                width: 90% !important;
+                margin: 1rem auto !important;
+                padding: 1.5rem !important;
+            }
+
+            /* Calculadora */
+            .calculadora {
+                width: 90% !important;
+                margin: 1rem auto !important;
+                padding: 1.5rem !important;
+            }
+
+            /* Footer */
+            footer {
+                padding: 2rem 1rem !important;
+            }
+
+            .footer-section {
+                width: 100% !important;
+                margin: 1rem 0 !important;
+            }
+
+            /* Listas */
+            ul, ol {
+                width: 100% !important;
+                padding: 0 2rem !important;
+                margin: 1rem auto !important;
+                list-style-position: inside !important;
             }
 
             li {
-                text-align: center;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            /* Centrado de imágenes */
-            img {
-                display: block;
-                margin: 1rem auto;
-                max-width: 100%;
-            }
-
-            /* Centrado de la calculadora */
-            .calculadora {
-                margin: 0 auto;
-                text-align: center;
-            }
-
-            /* Centrado del footer */
-            footer {
-                text-align: center;
-            }
-
-            .footer-content {
-                align-items: center;
-            }
-
-            /* Centrado de botones */
-            .boton {
-                margin: 1rem auto;
-            }
-
-            /* Centrado de contenido en imagen */
-            .contenido-imagen {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
+                text-align: center !important;
+                margin: 0.8rem 0 !important;
+                padding: 0 !important;
             }
 
             /* Excepción para la bibliografía */
-            .bibliografia-container li {
-                text-align: left;
+            .bibliografia-container {
+                width: 90% !important;
+                margin: 1rem auto !important;
+                padding: 1.5rem !important;
             }
 
-            /* Ajuste para elementos flex específicos */
-            div[style*="display: flex"] {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-                padding: 0 1rem;
-                box-sizing: border-box;
+            .bibliografia-container li {
+                text-align: left !important;
+                margin: 1rem 0 !important;
             }
         }
 
