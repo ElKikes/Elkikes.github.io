@@ -128,134 +128,96 @@
 
         /* Media queries para dispositivos móviles */
         @media screen and (max-width: 768px) {
-            /* Ajustes de navegación */
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-                gap: 0.5rem;
-            }
-            
-            /* Ajustes de contenido flex */
-            .contenido-flex {
-                flex-direction: column;
-            }
-            
-            /* Ajustes de columnas */
-            .columnas {
-                flex-direction: column;
-            }
-            
-            .columna {
-                width: 100%;
-            }
-            
-            /* Ajustes de galería de imágenes */
-            .galeria-imagenes {
-                flex-direction: column;
-            }
-            
-            .imagen-resultado {
-                max-width: 100%;
-            }
-            
-            /* Ajustes de footer */
-            .footer-content {
-                flex-direction: column;
+            /* Centrado general */
+            body {
                 text-align: center;
-                gap: 1rem;
-            }
-            
-            /* Ajustes de contenido de imagen */
-            .contenido-imagen {
-                width: 90%;
-                padding: 1rem;
-            }
-            
-            /* Ajustes de experimento sección */
-            .experimento-seccion {
-                flex-direction: column;
-            }
-            
-            .experimento-texto {
-                order: 1;
-                width: 100%;
-                padding: 0 1rem;
-            }
-            
-            .experimento-imagenes {
-                order: 2;
-                width: 100%;
-                margin-top: 1rem;
             }
 
-            /* Ajustes para la sección de ecuación */
-            .ecuacion-container {
-                flex-direction: column;
-            }
-
-            .ecuacion-texto {
-                order: 1;
-                flex: none;
-                width: 100%;
-            }
-
-            .ecuacion-imagen {
-                order: 2;
-                flex: none;
-                width: 100%;
-                margin-top: 1rem;
-            }
-
-            /* Ajustes para imágenes en lista */
-            ol li {
+            /* Centrado de todos los contenedores */
+            main, section, div {
                 display: flex;
                 flex-direction: column;
-            }
-
-            ol li p {
-                order: 1;
-            }
-
-            ol li div {
-                order: 2;
-                margin-top: 1rem;
-            }
-
-            /* Ajustes para galería de imágenes */
-            .galeria-imagenes {
-                flex-direction: column;
-            }
-
-            .imagen-resultado {
-                max-width: 100%;
-                margin-top: 1rem;
-            }
-
-            /* Ajustes para imágenes generales */
-            .imagen-contenedor {
-                margin-top: 1rem;
-            }
-
-            /* Ajustes de video */
-            .video-columna iframe {
-                height: 250px;
-            }
-            
-            /* Ajustes de texto */
-            main h2, main > p {
+                align-items: center;
+                justify-content: center;
+                width: 100%;
                 padding: 0 1rem;
+                box-sizing: border-box;
             }
-            
-            /* Ajustes de imágenes */
+
+            /* Centrado de texto */
+            p, h1, h2, h3, h4, h5, h6 {
+                text-align: center;
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            /* Centrado de listas */
+            ul, ol {
+                width: 100%;
+                padding: 0;
+                list-style-position: inside;
+                text-align: center;
+            }
+
+            li {
+                text-align: center;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            /* Centrado de imágenes */
             img {
+                display: block;
+                margin: 1rem auto;
                 max-width: 100%;
-                height: auto;
             }
-            
-            /* Ajustes de calculadora */
+
+            /* Centrado de la calculadora */
             .calculadora {
-                margin: 1rem;
-                padding: 1rem;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            /* Centrado del footer */
+            footer {
+                text-align: center;
+            }
+
+            .footer-content {
+                align-items: center;
+            }
+
+            /* Centrado de botones */
+            .boton {
+                margin: 1rem auto;
+            }
+
+            /* Centrado de contenido en imagen */
+            .contenido-imagen {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+
+            /* Excepción para la bibliografía */
+            .bibliografia-container li {
+                text-align: left;
+            }
+
+            /* Ajuste para elementos flex específicos */
+            div[style*="display: flex"] {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                padding: 0 1rem;
+                box-sizing: border-box;
             }
         }
 
