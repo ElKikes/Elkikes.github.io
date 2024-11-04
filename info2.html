@@ -431,6 +431,66 @@
                 font-size: 0.9rem;
                 padding: 8px 16px;
             }
+
+            /* Ajustes generales de texto y contenedores */
+            body {
+                overflow-x: hidden;
+            }
+
+            main {
+                padding: 1rem;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            /* Ajustes para todo el texto */
+            p, h1, h2, h3, h4, h5, h6, li, ul, ol {
+                max-width: 100%;
+                padding: 0 1rem;
+                box-sizing: border-box;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                hyphens: auto;
+            }
+
+            /* Ajustes para contenedores */
+            .contenido-flex,
+            .columnas,
+            .galeria-imagenes,
+            .experimento-seccion,
+            .footer-content,
+            div[style*="display: flex"] {
+                width: 100%;
+                padding: 0 1rem;
+                box-sizing: border-box;
+            }
+
+            /* Ajustes para listas */
+            ol, ul {
+                padding-left: 2rem;
+                padding-right: 1rem;
+            }
+
+            /* Ajustes para imágenes */
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            /* Ajustes para la calculadora */
+            .calculadora {
+                width: 90%;
+                margin: 1rem auto;
+                padding: 1rem;
+                box-sizing: border-box;
+            }
+
+            /* Ajustes para el footer */
+            footer {
+                width: 100%;
+                padding: 1rem;
+                box-sizing: border-box;
+            }
         }
 
         /* Media queries para tablets */
