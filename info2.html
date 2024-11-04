@@ -241,116 +241,125 @@
 
         /* Media queries para dispositivos móviles */
         @media screen and (max-width: 768px) {
-            /* Estilos generales */
+            /* Control absoluto de desbordamiento */
             * {
-                text-align: center !important;
+                max-width: 100vw !important;
                 box-sizing: border-box !important;
+                word-break: break-word !important;
+                overflow-wrap: break-word !important;
+                white-space: normal !important;
+                text-overflow: ellipsis !important;
             }
 
+            /* Control estricto del body */
             body {
-                overflow-x: hidden;
-                padding: 0;
-                margin: 0;
-            }
-
-            /* Header y navegación */
-            header {
-                padding: 1rem;
-            }
-
-            nav ul {
-                flex-direction: column;
-                gap: 0.8rem;
-                padding: 1rem;
-            }
-
-            nav ul li {
-                margin: 0;
-            }
-
-            /* Contenido principal */
-            main {
-                padding: 1rem;
-            }
-
-            /* Contenedores flex */
-            div[style*="display: flex"],
-            .contenido-flex,
-            .columnas,
-            .experimento-seccion,
-            .footer-content {
-                display: flex !important;
-                flex-direction: column !important;
-                align-items: center !important;
-                justify-content: center !important;
                 width: 100% !important;
-                gap: 1.5rem !important;
-                padding: 1rem !important;
-            }
-
-            /* Elementos de texto */
-            h1, h2, h3, h4, h5, h6, p {
-                width: 100% !important;
-                padding: 0 1rem !important;
-                margin: 1rem auto !important;
-            }
-
-            /* Imágenes */
-            img {
                 max-width: 100% !important;
+                overflow-x: hidden !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                position: relative !important;
+            }
+
+            /* Contenedores principales con padding reducido */
+            main, section, div, header, footer, nav {
+                width: 95% !important;
+                max-width: 95% !important;
+                margin: 0 auto !important;
+                padding: 0.5rem !important;
+                overflow: hidden !important;
+            }
+
+            /* Control de texto */
+            h1, h2, h3, h4, h5, h6, p, span, a {
+                width: 95% !important;
+                max-width: 95% !important;
+                padding: 0.5rem !important;
+                margin: 0.5rem auto !important;
+                font-size: 16px !important;
+                line-height: 1.4 !important;
+            }
+
+            /* Imágenes más pequeñas */
+            img {
+                width: 85% !important;
+                max-width: 85% !important;
                 height: auto !important;
                 margin: 1rem auto !important;
                 display: block !important;
             }
 
-            /* Columnas */
-            .columna {
-                width: 90% !important;
-                margin: 1rem auto !important;
-                padding: 1.5rem !important;
-            }
-
-            /* Calculadora */
-            .calculadora {
-                width: 90% !important;
-                margin: 1rem auto !important;
-                padding: 1.5rem !important;
-            }
-
-            /* Footer */
-            footer {
-                padding: 2rem 1rem !important;
-            }
-
-            .footer-section {
-                width: 100% !important;
-                margin: 1rem 0 !important;
-            }
-
-            /* Listas */
+            /* Listas ajustadas */
             ul, ol {
-                width: 100% !important;
-                padding: 0 2rem !important;
-                margin: 1rem auto !important;
+                width: 85% !important;
+                max-width: 85% !important;
+                padding: 0 !important;
+                margin: 0.5rem auto !important;
                 list-style-position: inside !important;
             }
 
             li {
-                text-align: center !important;
-                margin: 0.8rem 0 !important;
-                padding: 0 !important;
+                width: 100% !important;
+                padding: 0.3rem !important;
+                margin: 0.3rem 0 !important;
             }
 
-            /* Excepción para la bibliografía */
+            /* Calculadora más compacta */
+            .calculadora {
+                width: 85% !important;
+                max-width: 85% !important;
+                margin: 1rem auto !important;
+                padding: 0.8rem !important;
+            }
+
+            /* Contenido de imagen ajustado */
+            .imagen-contenedor {
+                width: 95% !important;
+                max-width: 95% !important;
+                margin: 0 auto !important;
+                overflow: hidden !important;
+            }
+
+            .contenido-imagen {
+                width: 85% !important;
+                max-width: 85% !important;
+                padding: 0.8rem !important;
+            }
+
+            /* Bibliografía ajustada */
             .bibliografia-container {
                 width: 90% !important;
-                margin: 1rem auto !important;
-                padding: 1.5rem !important;
+                max-width: 90% !important;
+                margin: 0.5rem auto !important;
+                padding: 0.8rem !important;
             }
 
             .bibliografia-container li {
-                text-align: left !important;
-                margin: 1rem 0 !important;
+                font-size: 14px !important;
+                line-height: 1.3 !important;
+                margin: 0.5rem 0 !important;
+            }
+
+            /* Footer más compacto */
+            .footer-content {
+                width: 90% !important;
+                padding: 0.5rem !important;
+            }
+
+            .footer-section {
+                width: 90% !important;
+                margin: 0.5rem auto !important;
+            }
+
+            /* Navegación ajustada */
+            nav ul {
+                width: 90% !important;
+                padding: 0 !important;
+            }
+
+            nav ul li {
+                width: 90% !important;
+                margin: 0.3rem auto !important;
             }
         }
 
@@ -532,4 +541,3 @@
     </footer>
 </body>
 </html>
-
