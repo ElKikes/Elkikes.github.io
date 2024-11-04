@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AquaGel</title>
+    <title>Hidrogel</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial, sans-serif; 
             line-height: 1.6;
             margin: 0;
             padding: 0;
@@ -49,49 +49,169 @@
             object-fit: cover;
         }
         main {
-            padding: 2rem;
+            padding: 0;
         }
-        .columnas {
-            display: flex;
-            justify-content: space-between;
-            gap: 2rem;
+        main h2, main > p {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        .imagen-contenedor {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            margin: 0;
+            overflow: hidden;
+        }
+        .imagen-fondo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .contenido-imagen {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 2rem;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 500px;
+        }
+        .boton {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #7ab3ad;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+        .boton:hover {
+            background-color: #5a8d87;
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: #93ccc6;
+            color: white;
+            padding: 2rem 0;
+            width: 100%;
             margin-top: 2rem;
         }
-        .columna {
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            padding: 0 2rem;
+        }
+        .footer-section {
             flex: 1;
-            background-color: white;
-            padding: 1.5rem;
+            margin: 0 1rem;
+        }
+        footer h2 {
+            margin-bottom: 1rem;
+            color: white;
+        }
+        .footer-section p, .footer-section a {
+            color: white;
+            text-decoration: none;
+            margin: 0.5rem 0;
+        }
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+        .contenido-flex {
+            display: flex;
+            gap: 2rem;
+            margin: 2rem auto;
+            max-width: 1200px;
+            padding: 0 2rem;
+        }
+        .texto-columna {
+            flex: 1;
+        }
+        .video-columna {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+        .video-columna iframe {
+            width: 100%;
+            height: 315px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        main h2 {
+            text-align: center;
+            margin: 2rem auto;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>AquaGel</h1>
+        <h1>Hidrogel</h1>
     </header>
     <nav>
         <ul>
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="info.html">Información</a></li>
-            <li><a href="info2.html">Empezar</a></li>
+            <li><a href="info.html">Empezar</a></li>
+            <li><a href="info2.html">Información</a></li>
         </ul>
     </nav>
     <main>
-                <div class="columnas">
-            <div class="columna">
-                <h2>Columna 1</h2>
-                <p>Contenido de la primera columna</p>
+        <img src="Images/campos-de-cultivo.jpg" alt="Campos de cultivo" class="hero-image">
+        <h2 style="text-align: center;">Bienvenido</h2>
+        <div class="contenido-flex">
+            <!-- Columna de texto (lado izquierdo) -->
+            <div class="texto-columna">
+                <p>La realización de este proyecto tiene como objetivo principal el ayudar al medio ambiente reduciendo el consumo del agua en el ámbito de la agricultura. Para realizar nuestra meta, se implementará el uso de hidrogel para lograr optimizar la absorción de la humedad del ambiente.  
+                    En Nuevo León, la constante presencia de sequías nos ha dado la tarea de gestionar este recurso vital. Sin embargo, son muchos los que cometen el error de desperdiciar lo poco de agua que logramos obtener; esto ocurre, por ejemplo, al regar las plantas o cultivos de manera inadecuada, sea aplicando una cantidad excesiva de agua, mayor a la cantidad que las plantas realmente necesitan o ubicando aspersores donde su eficiencia es mínima. Estas prácticas ocasionan que el agua disponible no se use de manera óptima ni eficiente, empeorando los problemas de escasez. 
+                    Sequías como la de 2011 acabaron con la producción temporal en México y disminuyeron drásticamente los datos ganaderos; en 2021-2023 hemos tenido una sequía que ha dejado sin agua a grandes ciudades, como Monterrey y la Ciudad de México, y ha vaciado los grandes embalses nacionales.</p>
             </div>
-            <div class="columna">
-                <h2>Columna 2</h2>
-                <p>Contenido de la segunda columna</p>
-            </div>
-            <div class="columna">
-                <h2>Columna 3</h2>
-                <p>Contenido de la tercera columna</p>
+            
+            <!-- Video de YouTube (lado derecho) -->
+            <div class="video-columna">
+                <iframe 
+                    width="100%" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/x1Qi2dd9bGg" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen
+                    style="border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                </iframe>
             </div>
         </div>
+        <div class="imagen-contenedor">
+            <img src="Images/img_caja1.jpg" alt="Caja 1" class="imagen-fondo">
+            <div class="contenido-imagen">
+                <h2>Experimentación</h2>
+                <p>Da clic en el siguiente botón para obtener más información sobre la experimentación realizada.</p>
+                <a href="info2.html#Experimentacion" class="boton">Más información</a>
+            </div>
+        </div>
+        
     </main>
+    <footer>
+        <h2 style="text-align: center;">Elaborado por:</h2>
+        <div class="footer-content">
+            <div class="footer-section">
+                <p>Santiago Villareal Fernández</p>
+                <p>Enrique Daniel Jáuregui Torres</p>
+                <p>Fátima Lizbeth Muñoz Téllez</p>
+            </div>
+            <div class="footer-section">
+                <p>Rodrigo Asael Rubí López</p>
+                <p>Ariana Lizeth Sánchez Martínez</p>
+                <p>Ariadna Fabiola Bonilla Villarreal</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
