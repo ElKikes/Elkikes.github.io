@@ -128,155 +128,134 @@
 
         /* Media queries para dispositivos móviles */
         @media screen and (max-width: 768px) {
-            /* Estilos generales */
-            * {
-                text-align: center !important;
-                box-sizing: border-box !important;
-            }
-
-            body {
-                overflow-x: hidden;
-                padding: 0;
-                margin: 0;
-            }
-
-            /* Estilos específicos para header y nav */
-            header {
-                background-color: #93ccc6;
-                padding: 1rem;
-                text-align: center;
-                width: 100%;
-            }
-
-            header h1 {
-                color: white;
-                margin: 0;
-                font-size: 1.8rem;
-            }
-
-            nav {
-                background-color: #7ab3ad;
-                width: 100%;
-                padding: 0.8rem 0;
-                position: sticky;
-                top: 0;
-                z-index: 1000;
-            }
-
+            /* Ajustes de navegación */
             nav ul {
-                display: flex;
                 flex-direction: column;
                 align-items: center;
+                gap: 0.5rem;
+            }
+            
+            /* Ajustes de contenido flex */
+            .contenido-flex {
+                flex-direction: column;
+            }
+            
+            /* Ajustes de columnas */
+            .columnas {
+                flex-direction: column;
+            }
+            
+            .columna {
+                width: 100%;
+            }
+            
+            /* Ajustes de galería de imágenes */
+            .galeria-imagenes {
+                flex-direction: column;
+            }
+            
+            .imagen-resultado {
+                max-width: 100%;
+            }
+            
+            /* Ajustes de footer */
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
                 gap: 1rem;
-                margin: 0;
-                padding: 0;
-                list-style: none;
             }
-
-            nav ul li {
-                width: 100%;
-                margin: 0;
-                padding: 0.5rem 0;
-            }
-
-            nav ul li a {
-                color: white;
-                text-decoration: none;
-                font-size: 1.1rem;
-                display: block;
-                width: 100%;
-                padding: 0.5rem 0;
-                transition: background-color 0.3s ease;
-            }
-
-            nav ul li a:hover {
-                background-color: rgba(255, 255, 255, 0.1);
-                text-decoration: none;
-            }
-
-            /* Contenido principal */
-            main {
+            
+            /* Ajustes de contenido de imagen */
+            .contenido-imagen {
+                width: 90%;
                 padding: 1rem;
             }
-
-            /* Contenedores flex */
-            div[style*="display: flex"],
-            .contenido-flex,
-            .columnas,
-            .experimento-seccion,
-            .footer-content {
-                display: flex !important;
-                flex-direction: column !important;
-                align-items: center !important;
-                justify-content: center !important;
-                width: 100% !important;
-                gap: 1.5rem !important;
-                padding: 1rem !important;
+            
+            /* Ajustes de experimento sección */
+            .experimento-seccion {
+                flex-direction: column;
+            }
+            
+            .experimento-texto {
+                order: 1;
+                width: 100%;
+                padding: 0 1rem;
+            }
+            
+            .experimento-imagenes {
+                order: 2;
+                width: 100%;
+                margin-top: 1rem;
             }
 
-            /* Elementos de texto */
-            h1, h2, h3, h4, h5, h6, p {
-                width: 100% !important;
-                padding: 0 1rem !important;
-                margin: 1rem auto !important;
+            /* Ajustes para la sección de ecuación */
+            .ecuacion-container {
+                flex-direction: column;
             }
 
-            /* Imágenes */
+            .ecuacion-texto {
+                order: 1;
+                flex: none;
+                width: 100%;
+            }
+
+            .ecuacion-imagen {
+                order: 2;
+                flex: none;
+                width: 100%;
+                margin-top: 1rem;
+            }
+
+            /* Ajustes para imágenes en lista */
+            ol li {
+                display: flex;
+                flex-direction: column;
+            }
+
+            ol li p {
+                order: 1;
+            }
+
+            ol li div {
+                order: 2;
+                margin-top: 1rem;
+            }
+
+            /* Ajustes para galería de imágenes */
+            .galeria-imagenes {
+                flex-direction: column;
+            }
+
+            .imagen-resultado {
+                max-width: 100%;
+                margin-top: 1rem;
+            }
+
+            /* Ajustes para imágenes generales */
+            .imagen-contenedor {
+                margin-top: 1rem;
+            }
+
+            /* Ajustes de video */
+            .video-columna iframe {
+                height: 250px;
+            }
+            
+            /* Ajustes de texto */
+            main h2, main > p {
+                padding: 0 1rem;
+            }
+            
+            /* Ajustes de imágenes */
             img {
-                max-width: 100% !important;
-                height: auto !important;
-                margin: 1rem auto !important;
-                display: block !important;
+                max-width: 100%;
+                height: auto;
             }
-
-            /* Columnas */
-            .columna {
-                width: 90% !important;
-                margin: 1rem auto !important;
-                padding: 1.5rem !important;
-            }
-
-            /* Calculadora */
+            
+            /* Ajustes de calculadora */
             .calculadora {
-                width: 90% !important;
-                margin: 1rem auto !important;
-                padding: 1.5rem !important;
-            }
-
-            /* Footer */
-            footer {
-                padding: 2rem 1rem !important;
-            }
-
-            .footer-section {
-                width: 100% !important;
-                margin: 1rem 0 !important;
-            }
-
-            /* Listas */
-            ul, ol {
-                width: 100% !important;
-                padding: 0 2rem !important;
-                margin: 1rem auto !important;
-                list-style-position: inside !important;
-            }
-
-            li {
-                text-align: center !important;
-                margin: 0.8rem 0 !important;
-                padding: 0 !important;
-            }
-
-            /* Excepción para la bibliografía */
-            .bibliografia-container {
-                width: 90% !important;
-                margin: 1rem auto !important;
-                padding: 1.5rem !important;
-            }
-
-            .bibliografia-container li {
-                text-align: left !important;
-                margin: 1rem 0 !important;
+                margin: 1rem;
+                padding: 1rem;
             }
         }
 
