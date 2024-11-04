@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hidrogel</title>
+    <title>AquaGel</title>
     <style>
         body {
-            font-family: Arial, sans-serif; 
+            font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
@@ -49,37 +49,38 @@
             object-fit: cover;
         }
         main {
-            padding: 0;
+            padding: 2rem;
         }
-        main h2, main > p {
+        .columnas {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .columna {
+            flex: 1;
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #93ccc6;
+            color: white;
+            padding: 2rem 0;
+            width: 100%;
+            margin-top: 2rem;
+        }
+        .footer-content {
             max-width: 1200px;
-            margin: 2rem auto;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
             padding: 0 2rem;
         }
-        .imagen-contenedor {
-            position: relative;
-            width: 100%;
-            height: 400px;
-            margin: 0;
-            overflow: hidden;
-        }
-        .imagen-fondo {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .contenido-imagen {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        .footer-section {
             text-align: center;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 2rem;
-            border-radius: 10px;
-            width: 80%;
-            max-width: 500px;
         }
         .boton {
             display: inline-block;
@@ -95,60 +96,34 @@
             background-color: #5a8d87;
             transform: scale(1.05);
         }
-        footer {
-            background-color: #93ccc6;
-            color: white;
-            padding: 2rem 0;
-            width: 100%;
-            margin-top: 2rem;
-        }
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-around;
-            padding: 0 2rem;
-        }
-        .footer-section {
-            flex: 1;
-            margin: 0 1rem;
-        }
-        footer h2 {
-            margin-bottom: 1rem;
-            color: white;
-        }
-        .footer-section p, .footer-section a {
-            color: white;
-            text-decoration: none;
-            margin: 0.5rem 0;
-        }
-        .footer-section a:hover {
-            text-decoration: underline;
-        }
-        .contenido-flex {
-            display: flex;
-            gap: 2rem;
+        .calculadora {
+            max-width: 400px;
             margin: 2rem auto;
-            max-width: 1200px;
-            padding: 0 2rem;
-        }
-        .texto-columna {
-            flex: 1;
-        }
-        .video-columna {
-            flex: 1;
-            display: flex;
-            align-items: center;
-        }
-        .video-columna iframe {
-            width: 100%;
-            height: 315px;
+            padding: 2rem;
+            background-color: #f5f5f5;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        main h2 {
+
+        .calculadora select {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+
+        .calculadora button {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .resultado {
             text-align: center;
-            margin: 2rem auto;
+            font-size: 1.1rem;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 4px;
         }
     </style>
 </head>
@@ -164,39 +139,60 @@
         </ul>
     </nav>
     <main>
-        <img src="Images/campos-de-cultivo.jpg" alt="Campos de cultivo" class="hero-image">
-        <h2 style="text-align: center;">Bienvenido</h2>
-        <div class="contenido-flex">
-            <!-- Columna de texto (lado izquierdo) -->
-            <div class="texto-columna">
-                <p>La realización de este proyecto tiene como objetivo principal el ayudar al medio ambiente reduciendo el consumo del agua en el ámbito de la agricultura. Para realizar nuestra meta, se implementará el uso de hidrogel para lograr optimizar la absorción de la humedad del ambiente.  
-                    En Nuevo León, la constante presencia de sequías nos ha dado la tarea de gestionar este recurso vital. Sin embargo, son muchos los que cometen el error de desperdiciar lo poco de agua que logramos obtener; esto ocurre, por ejemplo, al regar las plantas o cultivos de manera inadecuada, sea aplicando una cantidad excesiva de agua, mayor a la cantidad que las plantas realmente necesitan o ubicando aspersores donde su eficiencia es mínima. Estas prácticas ocasionan que el agua disponible no se use de manera óptima ni eficiente, empeorando los problemas de escasez. 
-                    Sequías como la de 2011 acabaron con la producción temporal en México y disminuyeron drásticamente los datos ganaderos; en 2021-2023 hemos tenido una sequía que ha dejado sin agua a grandes ciudades, como Monterrey y la Ciudad de México, y ha vaciado los grandes embalses nacionales.</p>
-            </div>
-            
-            <!-- Video de YouTube (lado derecho) -->
-            <div class="video-columna">
-                <iframe 
-                    width="100%" 
-                    height="315" 
-                    src="https://www.youtube.com/embed/x1Qi2dd9bGg" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen
-                    style="border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                </iframe>
-            </div>
+        <h2>¿Como utilizarlo?</h2>
+        <p>Antes de empezar a utilizar el hidrogel recomendamos leer la información de este.</p>
+        <div style="text-align: center;">
+            <a href="info2.html" class="boton">Más información</a>
         </div>
-        <div class="imagen-contenedor">
-            <img src="Images/img_caja1.jpg" alt="Caja 1" class="imagen-fondo">
-            <div class="contenido-imagen">
-                <h2>Experimentación</h2>
-                <p>Da clic en el siguiente botón para obtener más información sobre la experimentación realizada.</p>
-                <a href="info2.html#Experimentacion" class="boton">Más información</a>
+        <p>En caso de ya haber leido la información, ve al siguiente paso.</p>
+        <h2>¿Como se utiliza?</h2>
+        <p>Antes de colocarlo en el cultivo debes conocer las cantidades de hidrogel a colocar. Esto depende de la necesidad hidrica por metro cuadrado del cultivo a utilizar. Para ahorrarle tiempo, hemos creado una calculadora con la cual se puede obtener la cantidad de hidrogel necesario.</p>
+        
+        <div style="max-width: 400px; margin: 2rem auto; padding: 2rem; background-color: #f5f5f5; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            <h3 style="text-align: center; margin-bottom: 1rem;">Calculadora de Hidrogel</h3>
+            
+            <select id="cultivoSelect" style="width: 100%; padding: 0.5rem; margin-bottom: 1rem; border-radius: 4px; border: 1px solid #ddd;">
+                <option value="">Selecciona un tipo de cultivo</option>
+                <option value="2400">Frutas</option>
+                <option value="1250">Verduras</option>
+                <option value="1000">Leguminosas</option>
+            </select>
+            
+            <button onclick="calcular()" class="boton" style="width: 100%; margin-bottom: 1rem;">Calcular</button>
+            
+            <div id="resultado" style="text-align: center; font-size: 1.1rem; padding: 1rem; background-color: white; border-radius: 4px; display: none;">
+                El resultado es: <span id="valorResultado"></span> g/m<sup>2</sup>
             </div>
         </div>
         
+        <script>
+        function calcular() {
+            const select = document.getElementById('cultivoSelect');
+            const resultadoDiv = document.getElementById('resultado');
+            const valorResultadoSpan = document.getElementById('valorResultado');
+            
+            if (select.value === "") {
+                alert("Por favor selecciona un tipo de cultivo");
+                return;
+            }
+            
+            const n = parseFloat(select.value);
+            const b = 6.85;
+            const resultado = (n / b).toFixed(2);
+            
+            valorResultadoSpan.textContent = resultado;
+            resultadoDiv.style.display = 'block';
+        }
+        </script>
+    <p>Una vez que se haya calculado la cantidad de hidrogel necesario, se puede proceder a su uso.</p>
+    <h3>Colocarlo en el cultivo</h3>
+    <p>Para colocarlo se deben seguir los siguientes pasos:</p>
+    <ol>
+        <li>Juntar el cloruro de calcio con la pectina (en cantidades iguales)</li>
+        <li>Colocar la mezcla CERCA de las raices del cultivo o de la zona donde se va a sembrar.</li>
+        <li>Regar el cultivo con agua.</li>
+    </ol>
+    <p>Una vez la mezcla entre cloruro de calcio y pectina se una con el agua. El hidrogel estara hecho y en cuestion de horas empezara a absorber agua.</p>
     </main>
     <footer>
         <h2 style="text-align: center;">Elaborado por:</h2>
@@ -214,4 +210,5 @@
         </div>
     </footer>
 </body>
+
 </html>
