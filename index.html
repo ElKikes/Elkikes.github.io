@@ -150,91 +150,136 @@
             text-align: center;
             margin: 2rem auto;
         }
+
         /* Media queries para dispositivos móviles */
         @media screen and (max-width: 768px) {
-            /* Ajustes de navegación */
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-                gap: 0.5rem;
+            /* Control de desbordamiento global */
+            * {
+                max-width: 100% !important;
+                box-sizing: border-box !important;
+                word-wrap: break-word !important;
+                overflow-wrap: break-word !important;
+                hyphens: auto !important;
             }
-            
-            /* Ajustes de contenido flex */
-            .contenido-flex {
-                flex-direction: column;
-                gap: 2rem;
+
+            /* Control del body */
+            body {
+                overflow-x: hidden !important;
+                width: 100% !important;
+                max-width: 100vw !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                position: relative !important;
             }
-            
-            .texto-columna {
-                order: 1;
-                width: 100%;
-                padding: 0 1rem;
+
+            /* Contenedores principales */
+            main, header, nav, footer, section, div {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 auto !important;
+                padding: 1rem !important;
+                overflow: hidden !important;
             }
-            
-            .video-columna {
-                order: 2;
-                width: 100%;
-                padding: 0 1rem;
+
+            /* Elementos de texto */
+            h1, h2, h3, h4, h5, h6, p, span, a {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding: 0.5rem !important;
+                margin: 0.5rem auto !important;
+                overflow-wrap: break-word !important;
+                word-wrap: break-word !important;
             }
-            
-            .video-columna iframe {
-                width: 100%;
-                height: 250px;
-                margin-top: 1rem;
-            }
-            
-            /* Ajustes de columnas */
-            .columnas {
-                flex-direction: column;
-            }
-            
-            .columna {
-                width: 100%;
-            }
-            
-            /* Ajustes de galería de imágenes */
-            .galeria-imagenes {
-                flex-direction: column;
-            }
-            
-            .imagen-resultado {
-                max-width: 100%;
-            }
-            
-            /* Ajustes de footer */
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
-                gap: 1rem;
-            }
-            
-            /* Ajustes de contenido de imagen */
-            .contenido-imagen {
-                width: 90%;
-                padding: 1rem;
-            }
-            
-            /* Ajustes de experimento sección */
-            .experimento-seccion {
-                flex-direction: column;
-            }
-            
-            /* Ajustes de texto */
-            main h2, main > p {
-                padding: 0 1rem;
-            }
-            
-            /* Ajustes de imágenes */
+
+            /* Imágenes responsivas */
             img {
-                max-width: 100%;
+                max-width: 90% !important;
+                height: auto !important;
+                object-fit: contain !important;
+                margin: 1rem auto !important;
+                display: block !important;
             }
-            
-            /* Ajustes de calculadora */
+
+            /* Contenedores flex */
+            .contenido-flex,
+            .columnas,
+            .experimento-seccion,
+            .galeria-imagenes {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding: 0.5rem !important;
+                overflow: hidden !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+            }
+
+            /* Listas */
+            ul, ol {
+                width: 90% !important;
+                max-width: 90% !important;
+                padding: 0 1rem !important;
+                margin: 1rem auto !important;
+                list-style-position: inside !important;
+            }
+
+            li {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding: 0.5rem !important;
+                margin: 0.5rem 0 !important;
+                overflow-wrap: break-word !important;
+            }
+
+            /* Calculadora */
             .calculadora {
-                margin: 1rem;
-                padding: 1rem;
+                width: 90% !important;
+                max-width: 90% !important;
+                margin: 1rem auto !important;
+                padding: 1rem !important;
+            }
+
+            /* Contenido en imágenes */
+            .imagen-contenedor {
+                width: 100% !important;
+                max-width: 100% !important;
+                overflow: hidden !important;
+                position: relative !important;
+            }
+
+            .contenido-imagen {
+                width: 90% !important;
+                max-width: 90% !important;
+                left: 50% !important;
+                transform: translate(-50%, -50%) !important;
+            }
+
+            /* Tablas */
+            table {
+                width: 90% !important;
+                max-width: 90% !important;
+                margin: 1rem auto !important;
+                display: block !important;
+                overflow-x: auto !important;
+            }
+
+            /* Footer */
+            .footer-content {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding: 1rem !important;
+            }
+
+            /* Bibliografía */
+            .bibliografia-container {
+                width: 90% !important;
+                max-width: 90% !important;
+                margin: 1rem auto !important;
+                padding: 1rem !important;
+                overflow: hidden !important;
             }
         }
+
         /* Media queries para tablets */
         @media screen and (min-width: 769px) and (max-width: 1024px) {
             .contenido-flex {
@@ -272,7 +317,7 @@
                     En Nuevo León, la constante presencia de sequías nos ha dado la tarea de gestionar este recurso vital. Sin embargo, son muchos los que cometen el error de desperdiciar lo poco de agua que logramos obtener; esto ocurre, por ejemplo, al regar las plantas o cultivos de manera inadecuada, sea aplicando una cantidad excesiva de agua, mayor a la cantidad que las plantas realmente necesitan o ubicando aspersores donde su eficiencia es mínima. Estas prácticas ocasionan que el agua disponible no se use de manera óptima ni eficiente, empeorando los problemas de escasez. 
                     Sequías como la de 2011 acabaron con la producción temporal en México y disminuyeron drásticamente los datos ganaderos; en 2021-2023 hemos tenido una sequía que ha dejado sin agua a grandes ciudades, como Monterrey y la Ciudad de México, y ha vaciado los grandes embalses nacionales.</p>
             </div>
-
+            
             <!-- Video de YouTube (lado derecho) -->
             <div class="video-columna">
                 <iframe 
@@ -295,7 +340,7 @@
                 <a href="info2.html#Experimentacion" class="boton">Más información</a>
             </div>
         </div>
-
+        
     </main>
     <footer>
         <h2 style="text-align: center;">Elaborado por:</h2>
